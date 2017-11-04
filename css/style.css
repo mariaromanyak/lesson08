@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: url("../img/bg.png") no-repeat center;
+		background-size: cover;
+    background-color: #212534;
+}
+.main-block {
+    width: 600px;
+    height: 540px;
+    margin: 145px auto;
+    box-shadow: 0 0 25px rgba(0,0,0,0.7);
+}
+.header {
+    background-color: #2b3040;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 115px;
+    display: flex;
+    justify-content: space-between;
+}
+.tab-link {
+    height: 100%;
+    width: 148px;
+    text-align: center;
+    padding-top: 30px;
+}
+.tab-link:hover {
+    cursor: pointer;
+}
+.tab-link h1 {
+    font-family: Lato, sans-serif;
+    color: #b7bacd;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+.tab-link img {
+    fill: #b7bacd;
+    width: 25px;
+    height: 25px;
+    opacity: 0.6;
+}
+
+/* Styles for header's active tab and its info */
+.tab-link--active {
+    border-bottom: 2px solid #fff;
+}
+.tab-link--active h1 {
+    color: #fbfbfb;
+}
+.tab-link--active img {
+    opacity: 1;
+}
+.tab-content {
+    background-color: #212534;
+    padding: 55px 40px 60px 45px;
+    display: none;
+    height: 427px;
+		color: #fbfbfb;
+		font: 24px;
+		font-family: Lato, sans-serif;
+}
+
+/* Style for active tab when you click on it */
+.tab-active {
+    display: block;
+}
+
+/* Styles for elements which are inside a tab */
+.tab-content__general-img {
+    width: 162px;
+    height: 305px;
+    display: inline-block;
+    vertical-align: top;
+}
+.tab-content__info {
+    width: 349px;
+    display: inline-block;
+    padding-left: 40px;
+}
+.tab-content__info img {
+    float: right;
+}
+.tab-content__info h2 {
+    color: #ffffff;
+    font-family: Lato, sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.tab-content__info h3 {
+    color: #fdfdfd;
+    font-family: Lato, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+}
+.tab-content__info-text {
+    margin-top: 35px;
+    color: #b7bacd;
+    font-family: Lato, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+}
+.tab-content__info-buy {
+    margin-top: 57px;
+}
+.tab-content__info-buy div, button {
+    display: inline-block;
+}
+.tab-content__info-buy p:first-child {
+    color: #fedc3f;
+		margin-left: 4px;
+    font-family: Lato, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: ultra-condensed;
+}
+.tab-content__info-buy p:last-child {
+    color: #ffffff;
+    font-family: Lato, sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+}
+.tab-content__info-buy button {
+    width: 165px;
+    height: 55px;
+    vertical-align: top;
+    margin-left: 40px;
+    background-color: #13e28d;
+    border: none;
+    color: #ffffff;
+    font-family: Lato, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 2px;
+}
+.tab-content__info-buy button:hover {
+    box-shadow: 0 0 10px rgba(255,255,255,0.6);
+		cursor: pointer;
+}
+
+.star-rating {
+    direction: rtl;
+    display: inline-block;
+    padding: 0 26px;
+}
+
+.star-rating input[type=radio] {
+    display: none
+}
+
+.star-rating label {
+    color: #4b536b;
+    font-size: 18px;
+    padding: 0;
+    cursor: pointer;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input[type=radio]:checked ~ label {
+    color: #f2b600
+}
+
+/* Layout */
+.ba-container{
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1200px;
+}
+
+
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}

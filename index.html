@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GameTabs</title>
+		<link rel="icon" href="favicon.png"/>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="jq/rating/jquery.raty.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
+</head>
+<body>
+    <main class="main-block">
+        <header class="header">
+            <div class="tab-link tab-link--active" onclick="showGame(event, '#farCry')">
+                <img src="img/tooltip.png" alt="Info">
+                <h1>INFORMATION</h1>
+            </div>
+            <div class="tab-link" onclick="showGame(event, '#rating')">
+                <img src="img/card.png" alt="Card">
+                <h1>RATINGS INFO</h1>
+            </div>
+            <div class="tab-link" onclick="showGame(event, '#buy')">
+                <img src="img/basket.png" alt="Basket">
+                <h1>WHERE TO BUY</h1>
+            </div>
+        </header>
+        <section id="farCry" class="tab-content tab-active">
+            <div class="tab-content__general-img">
+                <img src="img/poster.png" alt="Game">
+								<div class="star-rating">
+									<input id="star-5" type="radio" name="rating" value="star-5">
+									<label for="star-5" title="5 stars">
+											<i class="active fa fa-star" aria-hidden="true"></i>
+									</label>
+									<input id="star-4" type="radio" name="rating" value="star-4">
+									<label for="star-4" title="4 stars">
+											<i class="active fa fa-star" aria-hidden="true"></i>
+									</label>
+									<input id="star-3" type="radio" name="rating" value="star-3">
+									<label for="star-3" title="3 stars">
+											<i class="active fa fa-star" aria-hidden="true"></i>
+									</label>
+									<input id="star-2" type="radio" name="rating" value="star-2">
+									<label for="star-2" title="2 stars">
+											<i class="active fa fa-star" aria-hidden="true"></i>
+									</label>
+									<input id="star-1" type="radio" name="rating" value="star-1">
+									<label for="star-1" title="1 star">
+											<i class="active fa fa-star" aria-hidden="true"></i>
+									</label>
+							</div>
+            </div>
+            <div class="tab-content__info">
+                <img src="img/rating.png" alt="Rating">
+                <h2>FarCry 4</h2>
+                <h3>First Released Nov 17, 2014</h3>
+                <p class="tab-content__info-text">In Far Cry 4, players find themselves in Kyrat, a breathtaking, perilous and wild region of the Hima
+                        layas struggling under the regime of a despotic self-appointed king.</p>
+                <div class="tab-content__info-buy">
+                    <div>
+                        <p>20% OFF!</p>
+                        <p>$59.96</p>
+                    </div>
+                    <button>BUY IT NOW</button>
+                </div>
+            </div>
+        </section>
+        <section id="rating" class="tab-content">
+            <p>Some info about rating.</p>
+        </section>
+        <section id="buy" class="tab-content">
+            <p>Some info about payment.</p>
+        </section>
+    </main>
+
+    <script>
+        function showGame(event, contentName) {
+            let tabcontent, tablinks;
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.querySelectorAll(".tab-content");
+            tabcontent.forEach(tab => {
+                tab.classList.remove('tab-active');
+        });
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.querySelectorAll(".tab-link");
+            tablinks.forEach(tabLink => {
+                tabLink.classList.remove('tab-link--active');
+        });
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.querySelector(contentName).classList.add('tab-active');
+            event.currentTarget.classList.add('tab-link--active');
+        }
+
+    </script>
+
+</body>
+</html>
